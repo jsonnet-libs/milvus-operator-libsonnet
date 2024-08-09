@@ -2,4 +2,4 @@
 
 This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
-[Docs](https://jsonnet-libs.github.io/milvus-operator-libsonnet)
+- [0.9](0.9/README.md)
