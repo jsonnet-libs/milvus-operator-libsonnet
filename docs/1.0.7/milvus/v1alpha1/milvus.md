@@ -1,5 +1,5 @@
 ---
-permalink: /0.9/milvus/v1alpha1/milvus/
+permalink: /1.0.7/milvus/v1alpha1/milvus/
 ---
 
 # milvus.v1alpha1.milvus
@@ -35,8 +35,10 @@ permalink: /0.9/milvus/v1alpha1/milvus/
   * [`fn withConfig(config)`](#fn-specwithconfig)
   * [`fn withConfigMixin(config)`](#fn-specwithconfigmixin)
   * [`fn withDisableMetric(disableMetric)`](#fn-specwithdisablemetric)
+  * [`fn withDnsPolicy(dnsPolicy)`](#fn-specwithdnspolicy)
   * [`fn withEnv(env)`](#fn-specwithenv)
   * [`fn withEnvMixin(env)`](#fn-specwithenvmixin)
+  * [`fn withHostNetwork(hostNetwork)`](#fn-specwithhostnetwork)
   * [`fn withImage(image)`](#fn-specwithimage)
   * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-specwithimagepullpolicy)
   * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-specwithimagepullsecrets)
@@ -222,6 +224,7 @@ permalink: /0.9/milvus/v1alpha1/milvus/
       * [`fn withEndpointsMixin(endpoints)`](#fn-specdependenciesetcdwithendpointsmixin)
       * [`fn withExternal(external)`](#fn-specdependenciesetcdwithexternal)
       * [`obj spec.dependencies.etcd.inCluster`](#obj-specdependenciesetcdincluster)
+        * [`fn withChartVersion(chartVersion)`](#fn-specdependenciesetcdinclusterwithchartversion)
         * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specdependenciesetcdinclusterwithdeletionpolicy)
         * [`fn withPvcDeletion(pvcDeletion)`](#fn-specdependenciesetcdinclusterwithpvcdeletion)
         * [`fn withValues(values)`](#fn-specdependenciesetcdinclusterwithvalues)
@@ -231,6 +234,7 @@ permalink: /0.9/milvus/v1alpha1/milvus/
       * [`fn withBrokerListMixin(brokerList)`](#fn-specdependencieskafkawithbrokerlistmixin)
       * [`fn withExternal(external)`](#fn-specdependencieskafkawithexternal)
       * [`obj spec.dependencies.kafka.inCluster`](#obj-specdependencieskafkaincluster)
+        * [`fn withChartVersion(chartVersion)`](#fn-specdependencieskafkainclusterwithchartversion)
         * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specdependencieskafkainclusterwithdeletionpolicy)
         * [`fn withPvcDeletion(pvcDeletion)`](#fn-specdependencieskafkainclusterwithpvcdeletion)
         * [`fn withValues(values)`](#fn-specdependencieskafkainclusterwithvalues)
@@ -251,6 +255,7 @@ permalink: /0.9/milvus/v1alpha1/milvus/
       * [`fn withEndpoint(endpoint)`](#fn-specdependenciespulsarwithendpoint)
       * [`fn withExternal(external)`](#fn-specdependenciespulsarwithexternal)
       * [`obj spec.dependencies.pulsar.inCluster`](#obj-specdependenciespulsarincluster)
+        * [`fn withChartVersion(chartVersion)`](#fn-specdependenciespulsarinclusterwithchartversion)
         * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specdependenciespulsarinclusterwithdeletionpolicy)
         * [`fn withPvcDeletion(pvcDeletion)`](#fn-specdependenciespulsarinclusterwithpvcdeletion)
         * [`fn withValues(values)`](#fn-specdependenciespulsarinclusterwithvalues)
@@ -273,6 +278,7 @@ permalink: /0.9/milvus/v1alpha1/milvus/
       * [`fn withSecretRef(secretRef)`](#fn-specdependenciesstoragewithsecretref)
       * [`fn withType(type)`](#fn-specdependenciesstoragewithtype)
       * [`obj spec.dependencies.storage.inCluster`](#obj-specdependenciesstorageincluster)
+        * [`fn withChartVersion(chartVersion)`](#fn-specdependenciesstorageinclusterwithchartversion)
         * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specdependenciesstorageinclusterwithdeletionpolicy)
         * [`fn withPvcDeletion(pvcDeletion)`](#fn-specdependenciesstorageinclusterwithpvcdeletion)
         * [`fn withValues(values)`](#fn-specdependenciesstorageinclusterwithvalues)
@@ -320,10 +326,14 @@ permalink: /0.9/milvus/v1alpha1/milvus/
       * [`fn withSpec(spec)`](#fn-specpersistencepersistentvolumeclaimwithspec)
       * [`fn withSpecMixin(spec)`](#fn-specpersistencepersistentvolumeclaimwithspecmixin)
   * [`obj spec.resources`](#obj-specresources)
+    * [`fn withClaims(claims)`](#fn-specresourceswithclaims)
+    * [`fn withClaimsMixin(claims)`](#fn-specresourceswithclaimsmixin)
     * [`fn withLimits(limits)`](#fn-specresourceswithlimits)
     * [`fn withLimitsMixin(limits)`](#fn-specresourceswithlimitsmixin)
     * [`fn withRequests(requests)`](#fn-specresourceswithrequests)
     * [`fn withRequestsMixin(requests)`](#fn-specresourceswithrequestsmixin)
+    * [`obj spec.resources.claims`](#obj-specresourcesclaims)
+      * [`fn withName(name)`](#fn-specresourcesclaimswithname)
   * [`obj spec.tolerations`](#obj-spectolerations)
     * [`fn withEffect(effect)`](#fn-spectolerationswitheffect)
     * [`fn withKey(key)`](#fn-spectolerationswithkey)
@@ -560,6 +570,14 @@ withDisableMetric(disableMetric)
 
 
 
+### fn spec.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.withEnv
 
 ```ts
@@ -577,6 +595,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.withImage
 
@@ -2016,6 +2042,14 @@ withExternal(external)
 
 
 
+### fn spec.dependencies.etcd.inCluster.withChartVersion
+
+```ts
+withChartVersion(chartVersion)
+```
+
+
+
 ### fn spec.dependencies.etcd.inCluster.withDeletionPolicy
 
 ```ts
@@ -2081,6 +2115,14 @@ withExternal(external)
 
 
 ## obj spec.dependencies.kafka.inCluster
+
+
+
+### fn spec.dependencies.kafka.inCluster.withChartVersion
+
+```ts
+withChartVersion(chartVersion)
+```
 
 
 
@@ -2229,6 +2271,14 @@ withExternal(external)
 
 
 ## obj spec.dependencies.pulsar.inCluster
+
+
+
+### fn spec.dependencies.pulsar.inCluster.withChartVersion
+
+```ts
+withChartVersion(chartVersion)
+```
 
 
 
@@ -2393,6 +2443,14 @@ withType(type)
 
 
 ## obj spec.dependencies.storage.inCluster
+
+
+
+### fn spec.dependencies.storage.inCluster.withChartVersion
+
+```ts
+withChartVersion(chartVersion)
+```
 
 
 
@@ -2744,6 +2802,24 @@ withSpecMixin(spec)
 
 
 
+### fn spec.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.resources.withLimits
 
 ```ts
@@ -2779,6 +2855,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.resources.claims
+
+
+
+### fn spec.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.tolerations
 

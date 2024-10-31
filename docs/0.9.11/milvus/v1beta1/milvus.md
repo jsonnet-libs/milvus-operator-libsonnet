@@ -1,5 +1,5 @@
 ---
-permalink: /0.9/milvus/v1beta1/milvus/
+permalink: /0.9.11/milvus/v1beta1/milvus/
 ---
 
 # milvus.v1beta1.milvus

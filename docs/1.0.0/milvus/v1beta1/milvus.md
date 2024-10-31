@@ -1,8 +1,8 @@
 ---
-permalink: /0.9/milvus/v1alpha1/milvusCluster/
+permalink: /1.0.0/milvus/v1beta1/milvus/
 ---
 
-# milvus.v1alpha1.milvusCluster
+# milvus.v1beta1.milvus
 
 
 
@@ -32,13 +32,20 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
 * [`obj spec`](#obj-spec)
   * [`fn withConfig(config)`](#fn-specwithconfig)
   * [`fn withConfigMixin(config)`](#fn-specwithconfigmixin)
+  * [`fn withHookConfig(hookConfig)`](#fn-specwithhookconfig)
+  * [`fn withHookConfigMixin(hookConfig)`](#fn-specwithhookconfigmixin)
+  * [`fn withMode(mode)`](#fn-specwithmode)
   * [`obj spec.components`](#obj-speccomponents)
+    * [`fn withActiveConfigMap(activeConfigMap)`](#fn-speccomponentswithactiveconfigmap)
     * [`fn withCommands(commands)`](#fn-speccomponentswithcommands)
     * [`fn withCommandsMixin(commands)`](#fn-speccomponentswithcommandsmixin)
     * [`fn withDisableMetric(disableMetric)`](#fn-speccomponentswithdisablemetric)
+    * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentswithdnspolicy)
+    * [`fn withEnableManualMode(enableManualMode)`](#fn-speccomponentswithenablemanualmode)
     * [`fn withEnableRollingUpdate(enableRollingUpdate)`](#fn-speccomponentswithenablerollingupdate)
     * [`fn withEnv(env)`](#fn-speccomponentswithenv)
     * [`fn withEnvMixin(env)`](#fn-speccomponentswithenvmixin)
+    * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentswithhostnetwork)
     * [`fn withImage(image)`](#fn-speccomponentswithimage)
     * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentswithimagepullpolicy)
     * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentswithimagepullsecrets)
@@ -53,6 +60,7 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`fn withPodLabels(podLabels)`](#fn-speccomponentswithpodlabels)
     * [`fn withPodLabelsMixin(podLabels)`](#fn-speccomponentswithpodlabelsmixin)
     * [`fn withPriorityClassName(priorityClassName)`](#fn-speccomponentswithpriorityclassname)
+    * [`fn withRollingMode(rollingMode)`](#fn-speccomponentswithrollingmode)
     * [`fn withRunWithSubProcess(runWithSubProcess)`](#fn-speccomponentswithrunwithsubprocess)
     * [`fn withSchedulerName(schedulerName)`](#fn-speccomponentswithschedulername)
     * [`fn withServiceAccountName(serviceAccountName)`](#fn-speccomponentswithserviceaccountname)
@@ -217,8 +225,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.dataCoord`](#obj-speccomponentsdatacoord)
       * [`fn withCommands(commands)`](#fn-speccomponentsdatacoordwithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsdatacoordwithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsdatacoordwithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsdatacoordwithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsdatacoordwithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsdatacoordwithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsdatacoordwithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsdatacoordwithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsdatacoordwithimagepullsecrets)
@@ -417,10 +427,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.dataCoord.imagePullSecrets`](#obj-speccomponentsdatacoordimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsdatacoordimagepullsecretswithname)
       * [`obj spec.components.dataCoord.resources`](#obj-speccomponentsdatacoordresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsdatacoordresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsdatacoordresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsdatacoordresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsdatacoordresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsdatacoordresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsdatacoordresourceswithrequestsmixin)
+        * [`obj spec.components.dataCoord.resources.claims`](#obj-speccomponentsdatacoordresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsdatacoordresourcesclaimswithname)
       * [`obj spec.components.dataCoord.tolerations`](#obj-speccomponentsdatacoordtolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsdatacoordtolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsdatacoordtolerationswithkey)
@@ -437,8 +451,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.dataNode`](#obj-speccomponentsdatanode)
       * [`fn withCommands(commands)`](#fn-speccomponentsdatanodewithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsdatanodewithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsdatanodewithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsdatanodewithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsdatanodewithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsdatanodewithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsdatanodewithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsdatanodewithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsdatanodewithimagepullsecrets)
@@ -637,10 +653,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.dataNode.imagePullSecrets`](#obj-speccomponentsdatanodeimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsdatanodeimagepullsecretswithname)
       * [`obj spec.components.dataNode.resources`](#obj-speccomponentsdatanoderesources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsdatanoderesourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsdatanoderesourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsdatanoderesourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsdatanoderesourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsdatanoderesourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsdatanoderesourceswithrequestsmixin)
+        * [`obj spec.components.dataNode.resources.claims`](#obj-speccomponentsdatanoderesourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsdatanoderesourcesclaimswithname)
       * [`obj spec.components.dataNode.tolerations`](#obj-speccomponentsdatanodetolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsdatanodetolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsdatanodetolerationswithkey)
@@ -678,8 +698,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.indexCoord`](#obj-speccomponentsindexcoord)
       * [`fn withCommands(commands)`](#fn-speccomponentsindexcoordwithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsindexcoordwithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsindexcoordwithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsindexcoordwithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsindexcoordwithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsindexcoordwithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsindexcoordwithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsindexcoordwithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsindexcoordwithimagepullsecrets)
@@ -878,10 +900,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.indexCoord.imagePullSecrets`](#obj-speccomponentsindexcoordimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsindexcoordimagepullsecretswithname)
       * [`obj spec.components.indexCoord.resources`](#obj-speccomponentsindexcoordresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsindexcoordresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsindexcoordresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsindexcoordresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsindexcoordresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsindexcoordresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsindexcoordresourceswithrequestsmixin)
+        * [`obj spec.components.indexCoord.resources.claims`](#obj-speccomponentsindexcoordresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsindexcoordresourcesclaimswithname)
       * [`obj spec.components.indexCoord.tolerations`](#obj-speccomponentsindexcoordtolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsindexcoordtolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsindexcoordtolerationswithkey)
@@ -898,8 +924,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.indexNode`](#obj-speccomponentsindexnode)
       * [`fn withCommands(commands)`](#fn-speccomponentsindexnodewithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsindexnodewithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsindexnodewithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsindexnodewithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsindexnodewithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsindexnodewithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsindexnodewithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsindexnodewithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsindexnodewithimagepullsecrets)
@@ -1098,10 +1126,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.indexNode.imagePullSecrets`](#obj-speccomponentsindexnodeimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsindexnodeimagepullsecretswithname)
       * [`obj spec.components.indexNode.resources`](#obj-speccomponentsindexnoderesources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsindexnoderesourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsindexnoderesourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsindexnoderesourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsindexnoderesourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsindexnoderesourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsindexnoderesourceswithrequestsmixin)
+        * [`obj spec.components.indexNode.resources.claims`](#obj-speccomponentsindexnoderesourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsindexnoderesourcesclaimswithname)
       * [`obj spec.components.indexNode.tolerations`](#obj-speccomponentsindexnodetolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsindexnodetolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsindexnodetolerationswithkey)
@@ -1118,8 +1150,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.mixCoord`](#obj-speccomponentsmixcoord)
       * [`fn withCommands(commands)`](#fn-speccomponentsmixcoordwithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsmixcoordwithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsmixcoordwithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsmixcoordwithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsmixcoordwithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsmixcoordwithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsmixcoordwithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsmixcoordwithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsmixcoordwithimagepullsecrets)
@@ -1318,10 +1352,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.mixCoord.imagePullSecrets`](#obj-speccomponentsmixcoordimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsmixcoordimagepullsecretswithname)
       * [`obj spec.components.mixCoord.resources`](#obj-speccomponentsmixcoordresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsmixcoordresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsmixcoordresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsmixcoordresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsmixcoordresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsmixcoordresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsmixcoordresourceswithrequestsmixin)
+        * [`obj spec.components.mixCoord.resources.claims`](#obj-speccomponentsmixcoordresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsmixcoordresourcesclaimswithname)
       * [`obj spec.components.mixCoord.tolerations`](#obj-speccomponentsmixcoordtolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsmixcoordtolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsmixcoordtolerationswithkey)
@@ -1338,8 +1376,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.proxy`](#obj-speccomponentsproxy)
       * [`fn withCommands(commands)`](#fn-speccomponentsproxywithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsproxywithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsproxywithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsproxywithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsproxywithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsproxywithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsproxywithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsproxywithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsproxywithimagepullsecrets)
@@ -1554,10 +1594,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
         * [`fn withTlsSecretRefs(tlsSecretRefs)`](#fn-speccomponentsproxyingresswithtlssecretrefs)
         * [`fn withTlsSecretRefsMixin(tlsSecretRefs)`](#fn-speccomponentsproxyingresswithtlssecretrefsmixin)
       * [`obj spec.components.proxy.resources`](#obj-speccomponentsproxyresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsproxyresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsproxyresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsproxyresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsproxyresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsproxyresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsproxyresourceswithrequestsmixin)
+        * [`obj spec.components.proxy.resources.claims`](#obj-speccomponentsproxyresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsproxyresourcesclaimswithname)
       * [`obj spec.components.proxy.tolerations`](#obj-speccomponentsproxytolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsproxytolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsproxytolerationswithkey)
@@ -1574,8 +1618,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.queryCoord`](#obj-speccomponentsquerycoord)
       * [`fn withCommands(commands)`](#fn-speccomponentsquerycoordwithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsquerycoordwithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsquerycoordwithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsquerycoordwithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsquerycoordwithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsquerycoordwithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsquerycoordwithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsquerycoordwithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsquerycoordwithimagepullsecrets)
@@ -1774,10 +1820,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.queryCoord.imagePullSecrets`](#obj-speccomponentsquerycoordimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsquerycoordimagepullsecretswithname)
       * [`obj spec.components.queryCoord.resources`](#obj-speccomponentsquerycoordresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsquerycoordresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsquerycoordresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsquerycoordresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsquerycoordresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsquerycoordresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsquerycoordresourceswithrequestsmixin)
+        * [`obj spec.components.queryCoord.resources.claims`](#obj-speccomponentsquerycoordresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsquerycoordresourcesclaimswithname)
       * [`obj spec.components.queryCoord.tolerations`](#obj-speccomponentsquerycoordtolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsquerycoordtolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsquerycoordtolerationswithkey)
@@ -1794,8 +1844,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.queryNode`](#obj-speccomponentsquerynode)
       * [`fn withCommands(commands)`](#fn-speccomponentsquerynodewithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsquerynodewithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsquerynodewithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsquerynodewithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsquerynodewithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsquerynodewithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsquerynodewithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsquerynodewithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsquerynodewithimagepullsecrets)
@@ -1994,10 +2046,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.queryNode.imagePullSecrets`](#obj-speccomponentsquerynodeimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsquerynodeimagepullsecretswithname)
       * [`obj spec.components.queryNode.resources`](#obj-speccomponentsquerynoderesources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsquerynoderesourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsquerynoderesourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsquerynoderesourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsquerynoderesourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsquerynoderesourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsquerynoderesourceswithrequestsmixin)
+        * [`obj spec.components.queryNode.resources.claims`](#obj-speccomponentsquerynoderesourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsquerynoderesourcesclaimswithname)
       * [`obj spec.components.queryNode.tolerations`](#obj-speccomponentsquerynodetolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsquerynodetolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsquerynodetolerationswithkey)
@@ -2012,15 +2068,21 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
         * [`fn withSubPath(subPath)`](#fn-speccomponentsquerynodevolumemountswithsubpath)
         * [`fn withSubPathExpr(subPathExpr)`](#fn-speccomponentsquerynodevolumemountswithsubpathexpr)
     * [`obj spec.components.resources`](#obj-speccomponentsresources)
+      * [`fn withClaims(claims)`](#fn-speccomponentsresourceswithclaims)
+      * [`fn withClaimsMixin(claims)`](#fn-speccomponentsresourceswithclaimsmixin)
       * [`fn withLimits(limits)`](#fn-speccomponentsresourceswithlimits)
       * [`fn withLimitsMixin(limits)`](#fn-speccomponentsresourceswithlimitsmixin)
       * [`fn withRequests(requests)`](#fn-speccomponentsresourceswithrequests)
       * [`fn withRequestsMixin(requests)`](#fn-speccomponentsresourceswithrequestsmixin)
+      * [`obj spec.components.resources.claims`](#obj-speccomponentsresourcesclaims)
+        * [`fn withName(name)`](#fn-speccomponentsresourcesclaimswithname)
     * [`obj spec.components.rootCoord`](#obj-speccomponentsrootcoord)
       * [`fn withCommands(commands)`](#fn-speccomponentsrootcoordwithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsrootcoordwithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsrootcoordwithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsrootcoordwithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsrootcoordwithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsrootcoordwithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsrootcoordwithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsrootcoordwithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsrootcoordwithimagepullsecrets)
@@ -2219,10 +2281,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
       * [`obj spec.components.rootCoord.imagePullSecrets`](#obj-speccomponentsrootcoordimagepullsecrets)
         * [`fn withName(name)`](#fn-speccomponentsrootcoordimagepullsecretswithname)
       * [`obj spec.components.rootCoord.resources`](#obj-speccomponentsrootcoordresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsrootcoordresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsrootcoordresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsrootcoordresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsrootcoordresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsrootcoordresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsrootcoordresourceswithrequestsmixin)
+        * [`obj spec.components.rootCoord.resources.claims`](#obj-speccomponentsrootcoordresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsrootcoordresourcesclaimswithname)
       * [`obj spec.components.rootCoord.tolerations`](#obj-speccomponentsrootcoordtolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsrootcoordtolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsrootcoordtolerationswithkey)
@@ -2239,8 +2305,10 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
     * [`obj spec.components.standalone`](#obj-speccomponentsstandalone)
       * [`fn withCommands(commands)`](#fn-speccomponentsstandalonewithcommands)
       * [`fn withCommandsMixin(commands)`](#fn-speccomponentsstandalonewithcommandsmixin)
+      * [`fn withDnsPolicy(dnsPolicy)`](#fn-speccomponentsstandalonewithdnspolicy)
       * [`fn withEnv(env)`](#fn-speccomponentsstandalonewithenv)
       * [`fn withEnvMixin(env)`](#fn-speccomponentsstandalonewithenvmixin)
+      * [`fn withHostNetwork(hostNetwork)`](#fn-speccomponentsstandalonewithhostnetwork)
       * [`fn withImage(image)`](#fn-speccomponentsstandalonewithimage)
       * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-speccomponentsstandalonewithimagepullpolicy)
       * [`fn withImagePullSecrets(imagePullSecrets)`](#fn-speccomponentsstandalonewithimagepullsecrets)
@@ -2455,10 +2523,14 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
         * [`fn withTlsSecretRefs(tlsSecretRefs)`](#fn-speccomponentsstandaloneingresswithtlssecretrefs)
         * [`fn withTlsSecretRefsMixin(tlsSecretRefs)`](#fn-speccomponentsstandaloneingresswithtlssecretrefsmixin)
       * [`obj spec.components.standalone.resources`](#obj-speccomponentsstandaloneresources)
+        * [`fn withClaims(claims)`](#fn-speccomponentsstandaloneresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-speccomponentsstandaloneresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-speccomponentsstandaloneresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-speccomponentsstandaloneresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-speccomponentsstandaloneresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-speccomponentsstandaloneresourceswithrequestsmixin)
+        * [`obj spec.components.standalone.resources.claims`](#obj-speccomponentsstandaloneresourcesclaims)
+          * [`fn withName(name)`](#fn-speccomponentsstandaloneresourcesclaimswithname)
       * [`obj spec.components.standalone.tolerations`](#obj-speccomponentsstandalonetolerations)
         * [`fn withEffect(effect)`](#fn-speccomponentsstandalonetolerationswitheffect)
         * [`fn withKey(key)`](#fn-speccomponentsstandalonetolerationswithkey)
@@ -2558,7 +2630,7 @@ permalink: /0.9/milvus/v1alpha1/milvusCluster/
 new(name)
 ```
 
-new returns an instance of MilvusCluster
+new returns an instance of Milvus
 
 ## obj metadata
 
@@ -2746,7 +2818,41 @@ withConfigMixin(config)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.withHookConfig
+
+```ts
+withHookConfig(hookConfig)
+```
+
+
+
+### fn spec.withHookConfigMixin
+
+```ts
+withHookConfigMixin(hookConfig)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.withMode
+
+```ts
+withMode(mode)
+```
+
+
+
 ## obj spec.components
+
+
+
+### fn spec.components.withActiveConfigMap
+
+```ts
+withActiveConfigMap(activeConfigMap)
+```
 
 
 
@@ -2776,6 +2882,22 @@ withDisableMetric(disableMetric)
 
 
 
+### fn spec.components.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
+### fn spec.components.withEnableManualMode
+
+```ts
+withEnableManualMode(enableManualMode)
+```
+
+
+
 ### fn spec.components.withEnableRollingUpdate
 
 ```ts
@@ -2801,6 +2923,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.withImage
 
@@ -2918,6 +3048,14 @@ withPodLabelsMixin(podLabels)
 
 ```ts
 withPriorityClassName(priorityClassName)
+```
+
+
+
+### fn spec.components.withRollingMode
+
+```ts
+withRollingMode(rollingMode)
 ```
 
 
@@ -4186,6 +4324,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.dataCoord.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.dataCoord.withEnv
 
 ```ts
@@ -4203,6 +4349,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.dataCoord.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.dataCoord.withImage
 
@@ -5722,6 +5876,24 @@ withName(name)
 
 
 
+### fn spec.components.dataCoord.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.dataCoord.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.dataCoord.resources.withLimits
 
 ```ts
@@ -5757,6 +5929,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.dataCoord.resources.claims
+
+
+
+### fn spec.components.dataCoord.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.dataCoord.tolerations
 
@@ -5876,6 +6060,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.dataNode.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.dataNode.withEnv
 
 ```ts
@@ -5893,6 +6085,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.dataNode.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.dataNode.withImage
 
@@ -7412,6 +7612,24 @@ withName(name)
 
 
 
+### fn spec.components.dataNode.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.dataNode.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.dataNode.resources.withLimits
 
 ```ts
@@ -7447,6 +7665,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.dataNode.resources.claims
+
+
+
+### fn spec.components.dataNode.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.dataNode.tolerations
 
@@ -7706,6 +7936,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.indexCoord.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.indexCoord.withEnv
 
 ```ts
@@ -7723,6 +7961,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.indexCoord.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.indexCoord.withImage
 
@@ -9242,6 +9488,24 @@ withName(name)
 
 
 
+### fn spec.components.indexCoord.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.indexCoord.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.indexCoord.resources.withLimits
 
 ```ts
@@ -9277,6 +9541,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.indexCoord.resources.claims
+
+
+
+### fn spec.components.indexCoord.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.indexCoord.tolerations
 
@@ -9396,6 +9672,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.indexNode.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.indexNode.withEnv
 
 ```ts
@@ -9413,6 +9697,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.indexNode.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.indexNode.withImage
 
@@ -10932,6 +11224,24 @@ withName(name)
 
 
 
+### fn spec.components.indexNode.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.indexNode.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.indexNode.resources.withLimits
 
 ```ts
@@ -10967,6 +11277,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.indexNode.resources.claims
+
+
+
+### fn spec.components.indexNode.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.indexNode.tolerations
 
@@ -11086,6 +11408,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.mixCoord.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.mixCoord.withEnv
 
 ```ts
@@ -11103,6 +11433,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.mixCoord.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.mixCoord.withImage
 
@@ -12622,6 +12960,24 @@ withName(name)
 
 
 
+### fn spec.components.mixCoord.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.mixCoord.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.mixCoord.resources.withLimits
 
 ```ts
@@ -12657,6 +13013,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.mixCoord.resources.claims
+
+
+
+### fn spec.components.mixCoord.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.mixCoord.tolerations
 
@@ -12776,6 +13144,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.proxy.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.proxy.withEnv
 
 ```ts
@@ -12793,6 +13169,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.proxy.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.proxy.withImage
 
@@ -14448,6 +14832,24 @@ withTlsSecretRefsMixin(tlsSecretRefs)
 
 
 
+### fn spec.components.proxy.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.proxy.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.proxy.resources.withLimits
 
 ```ts
@@ -14483,6 +14885,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.proxy.resources.claims
+
+
+
+### fn spec.components.proxy.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.proxy.tolerations
 
@@ -14602,6 +15016,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.queryCoord.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.queryCoord.withEnv
 
 ```ts
@@ -14619,6 +15041,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.queryCoord.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.queryCoord.withImage
 
@@ -16138,6 +16568,24 @@ withName(name)
 
 
 
+### fn spec.components.queryCoord.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.queryCoord.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.queryCoord.resources.withLimits
 
 ```ts
@@ -16173,6 +16621,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.queryCoord.resources.claims
+
+
+
+### fn spec.components.queryCoord.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.queryCoord.tolerations
 
@@ -16292,6 +16752,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.queryNode.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.queryNode.withEnv
 
 ```ts
@@ -16309,6 +16777,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.queryNode.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.queryNode.withImage
 
@@ -17828,6 +18304,24 @@ withName(name)
 
 
 
+### fn spec.components.queryNode.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.queryNode.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.queryNode.resources.withLimits
 
 ```ts
@@ -17863,6 +18357,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.queryNode.resources.claims
+
+
+
+### fn spec.components.queryNode.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.queryNode.tolerations
 
@@ -17964,6 +18470,24 @@ withSubPathExpr(subPathExpr)
 
 
 
+### fn spec.components.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.resources.withLimits
 
 ```ts
@@ -18000,6 +18524,18 @@ withRequestsMixin(requests)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.components.resources.claims
+
+
+
+### fn spec.components.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
+
 ## obj spec.components.rootCoord
 
 
@@ -18022,6 +18558,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.rootCoord.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.rootCoord.withEnv
 
 ```ts
@@ -18039,6 +18583,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.rootCoord.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.rootCoord.withImage
 
@@ -19558,6 +20110,24 @@ withName(name)
 
 
 
+### fn spec.components.rootCoord.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.rootCoord.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.rootCoord.resources.withLimits
 
 ```ts
@@ -19593,6 +20163,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.rootCoord.resources.claims
+
+
+
+### fn spec.components.rootCoord.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.rootCoord.tolerations
 
@@ -19712,6 +20294,14 @@ withCommandsMixin(commands)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.components.standalone.withDnsPolicy
+
+```ts
+withDnsPolicy(dnsPolicy)
+```
+
+
+
 ### fn spec.components.standalone.withEnv
 
 ```ts
@@ -19729,6 +20319,14 @@ withEnvMixin(env)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.components.standalone.withHostNetwork
+
+```ts
+withHostNetwork(hostNetwork)
+```
+
+
 
 ### fn spec.components.standalone.withImage
 
@@ -21384,6 +21982,24 @@ withTlsSecretRefsMixin(tlsSecretRefs)
 
 
 
+### fn spec.components.standalone.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+
+
+### fn spec.components.standalone.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.components.standalone.resources.withLimits
 
 ```ts
@@ -21419,6 +22035,18 @@ withRequestsMixin(requests)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.components.standalone.resources.claims
+
+
+
+### fn spec.components.standalone.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+
 
 ## obj spec.components.standalone.tolerations
 
