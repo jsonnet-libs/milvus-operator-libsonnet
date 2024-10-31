@@ -2,47 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1alpha1/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1alpha1/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1alpha1/milvus/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1alpha1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1alpha1/milvusCluster/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1alpha1/milvusCluster/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1beta1/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1beta1/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1beta1/milvus/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1beta1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9/milvus/v1beta1/milvusUpgrade/</loc>
-         <lastmod>2024-08-09</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/0.9.11/milvus/v1beta1/milvusUpgrade/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1alpha1/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1alpha1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1alpha1/milvusCluster/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1beta1/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1beta1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.0/milvus/v1beta1/milvusUpgrade/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1alpha1/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1alpha1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1alpha1/milvusCluster/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1beta1/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1beta1/milvus/</loc>
+         <lastmod>2024-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/milvus-operator-libsonnet/1.0.7/milvus/v1beta1/milvusUpgrade/</loc>
+         <lastmod>2024-10-31</lastmod>
     </url>
 </urlset>
